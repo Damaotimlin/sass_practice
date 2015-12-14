@@ -16,6 +16,10 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Bootstrap 4 ruby gem for Ruby on Rails (Sprockets) and Compass.
 gem 'bootstrap', '~> 4.0.0.alpha2'
+# Tooltips and popovers depend on tether for positioning. 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
 # Bootstrap 3 Sass
 # gem 'bootstrap-sass', '~> 3.3.6'
 
