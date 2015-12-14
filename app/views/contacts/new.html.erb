@@ -1,24 +1,24 @@
 <div>
     <%= form_for @contact do |f| %>
     <form>
-        <fieldset class="form-group">
-            <%= f.label :name, for:'formGroupExampleInput'%>
-            <%= f.text_field :name, class:'form-control', type:'text', id:'formInputName', placeholder:'Your name :'%>
-        </fieldset>
-        
-        <fieldset class="form-group">
-            <%= f.label :email, for:'formGroupExampleInput'%>
-            <%= f.text_field :email, class:'form-control', type:'text', id:'formInptEmail', placeholder:'Your E-mail :'%>
-        </fieldset>
-        
-        <fieldset class="form-group">
-            <%= f.label :comments, for:'formGroupExampleInput'%>
-            <%= f.text_area :comments, class:'form-control', type:'text', id:'formInputComments', placeholder:'Please let us know your comments :'%>
-        </fieldset>
-        
-        <%= f.submit 'Submit', class:'btn btn-secondary'%>
-        
+        <div class="col-md-6">
+            <fieldset class="form-group">
+                <%= f.label :name, for:'formGroupExampleInput'%>
+                <%= f.text_field :name, class:'form-control', type:'text', id:'formInputName', placeholder:'Your name :'%>
+            </fieldset>
+            
+            <fieldset class="form-group">
+                <%= f.label :email, for:'formGroupExampleInput'%>
+                <%= f.text_field :email, class:'form-control', type:'text', id:'formInptEmail', placeholder:'Your E-mail :'%>
+            </fieldset>
+            
+            <fieldset class="form-group">
+                <%= f.label :comments, for:'formGroupExampleInput'%>
+                <%= f.text_area :comments, class:'form-control', type:'text', id:'formInputComments', placeholder:'Please let us know your comments :'%>
+            </fieldset>
+            
+            <%= f.submit 'Submit', class:'btn btn-secondary'%>
+        </div>
     </form>
-    
     <%end%>
 </div>
