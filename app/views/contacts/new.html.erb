@@ -1,12 +1,21 @@
 <div>
     <%= form_for @contact do |f| %>
-    <%= f.label :name%>
-    <%= f.text_field :name%>
+    <form>
+        <fieldset class="form-group">
+            <%= f.label :name, for:'formGroupExampleInput'%>
+            <%= f.text_field :name, class:'form-control'%>
+        </fieldset>
+        
+        <fieldset class="form-group">
+            <%= f.label :email, for:'formGroupExampleInput'%>
+            <%= f.text_field :email, class:'form-control'%>
+        </fieldset>
+        
+        <fieldset class="form-group">
+            <%= f.label :comments, for:'formGroupExampleInput'%>
+            <%= f.text_area :comments, class:'form-control'%>
+        </fieldset>
+    </form>
     
-    <%= f.label :email%>
-    <%= f.text_field :email%>
-    
-    <%= f.label :comments%>
-    <%= f.text_area :comments%>
     <%end%>
 </div>
