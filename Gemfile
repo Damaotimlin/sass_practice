@@ -6,7 +6,7 @@ gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: [:development, :test]
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '>= 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Bootstrap 4 ruby gem for Ruby on Rails (Sprockets) and Compass.
 gem 'bootstrap', '~> 4.0.0.alpha1'
+# Bootstrap 3 Sass
+# gem 'bootstrap-sass', '~> 3.3.6'
 
 # Use pg as heroku DB
 group :production do
