@@ -13,7 +13,4 @@
  *= require_tree .
  *= require_self
  */
-// Custom bootstrap variables must be set or import before bootstrap itself.
-// @import "bootstrap-sprockets"; // For Bootstrap 3, its require import sprockests and should be added before 'bootstrap' 
-@import "bootstrap";
-@import "font-awesome";
+

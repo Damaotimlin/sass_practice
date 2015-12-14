@@ -1,0 +1,17 @@
+// Custom bootstrap variables must be set or import before bootstrap itself.
+// @import "bootstrap-sprockets"; // For Bootstrap 3, its require import sprockests and should be added before 'bootstrap' 
+@import "bootstrap";
+@import "font-awesome";
+
+
+.navbar { // Gradient from http://uigradients.com/
+    background: #ED4264; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ED4264 , #FFEDBC); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #ED4264 , #FFEDBC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body {
+    background: #ED4264; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ED4264 , #FFEDBC); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #ED4264 , #FFEDBC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
