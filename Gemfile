@@ -15,7 +15,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 # Bootstrap 4 ruby gem for Ruby on Rails (Sprockets) and Compass.
-gem 'bootstrap', '~> 4.0.0.alpha1'
+gem 'bootstrap', '~> 4.0.0.alpha2'
 # Bootstrap 3 Sass
 # gem 'bootstrap-sass', '~> 3.3.6'
 
