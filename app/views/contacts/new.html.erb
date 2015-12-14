@@ -1,24 +1,26 @@
 <div>
-    <%= form_for @contact do |f| %>
     <form>
-        <div class="col-md-6">
-            <fieldset class="form-group">
-                <%= f.label :name, for:'formGroupExampleInput'%>
-                <%= f.text_field :name, class:'form-control', type:'text', id:'formInputName', placeholder:'Your name :'%>
-            </fieldset>
-            
-            <fieldset class="form-group">
-                <%= f.label :email, for:'formGroupExampleInput'%>
-                <%= f.text_field :email, class:'form-control', type:'text', id:'formInptEmail', placeholder:'Your E-mail :'%>
-            </fieldset>
-            
-            <fieldset class="form-group">
-                <%= f.label :comments, for:'formGroupExampleInput'%>
-                <%= f.text_area :comments, class:'form-control', type:'text', id:'formInputComments', placeholder:'Please let us know your comments :'%>
-            </fieldset>
-            
-            <%= f.submit 'Submit', class:'btn btn-secondary'%>
+        <div class="col-xs-12 col-sm-6 col-lg-8">
+            <div class="jumbotron">
+                <%= form_for @contact do |f| %>
+                    <fieldset class="form-group">
+                        <%= f.label :name, for:'formGroupExampleInput'%>
+                        <%= f.text_field :name, class:'form-control', type:'text', id:'formInputName', placeholder:'Your name :'%>
+                    </fieldset>
+                    
+                    <fieldset class="form-group">
+                        <%= f.label :email, for:'formGroupExampleInput'%>
+                        <%= f.text_field :email, class:'form-control', type:'text', id:'formInptEmail', placeholder:'Your E-mail :'%>
+                    </fieldset>
+                    
+                    <fieldset class="form-group">
+                        <%= f.label :comments, for:'formGroupExampleInput'%>
+                        <%= f.text_area :comments, class:'form-control', type:'text', id:'formInputComments', placeholder:'Please let us know your comments :'%>
+                    </fieldset>
+                    
+                    <%= f.submit 'Submit', class:'btn btn-secondary'%>
+                <%end%>
+            </div>
         </div>
     </form>
-    <%end%>
 </div>
