@@ -22,6 +22,8 @@ source 'https://rails-assets.org' do
 end
 # Bootstrap 3 Sass
 # gem 'bootstrap-sass', '~> 3.3.6'
+# Use fount awesome libary for icons
+gem "font-awesome-rails"
 
 # Use pg as heroku DB
 group :production do
