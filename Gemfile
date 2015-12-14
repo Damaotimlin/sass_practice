@@ -14,6 +14,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
+# Bootstrap 4 ruby gem for Ruby on Rails (Sprockets) and Compass.
+gem 'bootstrap', '~> 4.0.0.alpha1'
+
 # Use pg as heroku DB
 group :production do
 gem 'pg'
