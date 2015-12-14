@@ -31,14 +31,17 @@
           <a class="nav-link" href="#">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
           <!--<a class="nav-link" href="/about">About</a>-->
           <%= link_to about_path, class: 'nav-link' do %>
           <i class="fa fa-users"></i><!-- Added Font Awsome and raplaced 'About', need to add gem and import .scss-->
           About Us
           <% end %>
+        </li>
+        <li class="nav-item">
+          <!--<a class="nav-link" href="#">Contact Us</a>-->
+          <%= link_to new_contact_path, class:'nav-link' do %>
+          Contact Us
+          <%end%>
         </li>
       </ul>
       <form class="form-inline pull-xs-right">
