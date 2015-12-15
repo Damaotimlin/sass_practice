@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
             flash[:success] = "Message sent successfully." # Rails flash notice
             redirect_to new_contact_path #, notice: "Message sent."
         else
-            flash[:warning] = "ERROR: Massage fail to sent."
+            flash[:warning] = "ERROR: Massage fail to sent; please be sure you type in your name and email."
             redirect_to new_contact_path #, notice: "ERROR: Message don\'t sent"
         end
     end
