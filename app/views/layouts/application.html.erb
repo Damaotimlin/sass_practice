@@ -53,8 +53,8 @@
 
   <div class="container-fluid"> <!-- Get lay out properly -->
     <div class="container">
-      <%= flash.each do |k, v|%>
-        <%= content_tag :div, v, class: "alert alert-#{k}" %>
+      <% flash.each do |k, v|%> <!-- !! No equal sign before flash.each !! -->
+        <%= content_tag :div, v, class: "alert alert-#{k}", role: "alert" %>
       <%end%>
     </div>
   
