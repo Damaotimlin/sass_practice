@@ -6,9 +6,11 @@ class ContactsController < ApplicationController
     def create
         @contact = Contact.new(contact_params)
         if @contact.save
-            redirect_to new_contact_path, notice: "Message sent."
+            flash[:success] = "Message sent successfully." # Rails flash notice
+            redirect_to new_contact_path #, notice: "Message sent."
         else
-            redirect_to new_contact_path, notice: "ERROR: Message don\'t sent"
+            flash[:error] = "ERROR: Massage fail to sent."
+            redirect_to new_contact_path #, notice: "ERROR: Message don\'t sent"
         end
     end
     

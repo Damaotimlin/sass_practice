@@ -51,9 +51,15 @@
     <!--</div>-->
   </nav>
 
-<div class="container-fluid"> <!-- Get lay out properly -->
-  <%= yield %> <!--Get anything from ruby controller(pages)-->
-</div>
+  <div class="container-fluid"> <!-- Get lay out properly -->
+    <div class="container">
+      <%= flash.each do |k, v|%>
+        <%= content_tag :div, v, class: "alert alert-#{k}"
+      <%end%>
+    </div>
+  
+    <%= yield %> <!--Get anything from ruby controller(pages)-->
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
