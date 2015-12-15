@@ -1,26 +1,25 @@
 <div>
-    <form>
-        <div class="col-xs-12 col-sm-6 col-lg-8">
-            <div class="jumbotron">
-                <%= form_for @contact do |f| %>
-                    <fieldset class="form-group">
-                        <%= f.label :name, for:'formGroupExampleInput'%>
-                        <%= f.text_field :name, class:'form-control', type:'text', id:'formInputName', placeholder:'姓名 :'%>
-                    </fieldset>
-                    
-                    <fieldset class="form-group">
-                        <%= f.label :email, for:'formGroupExampleInput'%>
-                        <%= f.text_field :email, class:'form-control', type:'text', id:'formInptEmail', placeholder:'電子信箱 :'%>
-                    </fieldset>
-                    
-                    <fieldset class="form-group">
-                        <%= f.label :comments, for:'formGroupExampleInput'%>
-                        <%= f.text_area :comments, class:'form-control', type:'text', id:'formInputComments', placeholder:'Please let us know your comments :'%>
-                    </fieldset>
-                    
-                    <%= f.submit 'Submit', class:'btn btn-secondary'%>
-                <%end%>
-            </div>
+    <div class="col-xs-12 col-sm-6 col-lg-8">
+        <div class="jumbotron">
+            <%= form_for @contact do |f| %> <!--Ruby will automatically generate <form></form> tag-->
+                <fieldset class="form-group">
+                    <%= f.label :name, for:'formGroupExampleInput'%>
+                    <%= f.text_field :name, class:'form-control', type:'text', id:'formInputName', placeholder:'姓名 :'%>
+                </fieldset>
+                
+                <fieldset class="form-group">
+                    <%= f.label :email, for:'formGroupExampleInput'%>
+                    <%= f.text_field :email, class:'form-control', type:'text', id:'formInptEmail', placeholder:'電子信箱 :'%>
+                </fieldset>
+                
+                <fieldset class="form-group">
+                    <%= f.label :comments, for:'formGroupExampleInput'%>
+                    <%= f.text_area :comments, class:'form-control', type:'text', id:'formInputComments', placeholder:'Please let us know your comments :'%>
+                </fieldset>
+                
+                <%= f.submit 'Submit', class:'btn btn-secondary'%>
+            <%end%>
         </div>
-    </form>
+    </div>
+
 </div>
