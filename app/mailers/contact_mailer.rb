@@ -1,4 +1,4 @@
-class ContactMailer < ActionMailer::Based
+class ContactMailer < ActionMailer::Base
     
     default to: 'damao.republic@gmail.com'
     
