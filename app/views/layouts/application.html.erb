@@ -28,12 +28,6 @@
 
         </li>
         <li class="nav-item">
-          <!--<a class="nav-link" href="/users/sign_in">LogIn</a>-->
-          <%= link_to new_user_session_path, class:'nav-link', method: :get do %>
-          LogIn
-          <% end %>
-        </li>
-        <li class="nav-item">
           <!--<a class="nav-link" href="/about">About</a>-->
           <%= link_to about_path, class: 'nav-link' do %>
           <i class="fa fa-users"></i><!-- Added Font Awsome and raplaced 'About', need to add gem and import .scss-->
@@ -50,6 +44,12 @@
       <form class="form-inline pull-xs-right">
         <input class="form-control" type="text" placeholder="Search">
         <button class="btn btn-success-outline" type="submit">Search</button>
+        <a>
+          <!--<a class="nav-link" href="/users/sign_in">LogIn</a>-->
+          <%= link_to new_user_session_path, class: 'btn btn-success', role: 'button', method: :get do %>
+          LogIn
+          <% end %>
+        </a>
       </form>
     <!--</div>-->
   </nav>
