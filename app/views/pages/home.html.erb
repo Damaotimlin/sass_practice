@@ -10,7 +10,7 @@
                 <div class="card-block">
                     <h4 class="card-title">Basic Membership</h4>
                     <p class="card-text">Sign up to get free basic access</p>
-                    <%= link_to new_user_registration_path, class: 'btn btn-info btn-lg btn-block', method: :get do %>
+                    <%= link_to new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-info btn-lg btn-block', method: :get do %>
                     <h4>Sign Up Free</h4>
                     <% end %>
                 </div>
@@ -22,7 +22,7 @@
                 <div class="card-block">
                     <h4 class="card-title">Paid Membership</h4>
                     <p class="card-text">Become a pro user!!</p>
-                    <%= link_to new_user_registration_path, class: 'btn btn-success btn-lg btn-block active', method: :get do %>
+                    <%= link_to new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block active', method: :get do %>
                     <h4>Sign Up to PRO</h4>
                     <% end %>
                 </div>
