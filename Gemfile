@@ -35,6 +35,12 @@ end
 # Devise is a flexible authentication solution for Rails based on Warden
 gem 'devise'
 
+# Stripe for credir card payment infrastructure
+gem 'stripe'
+
+# Figaro strives to be secure by default by encouraging a convention that keeps configuration out of Git
+gem 'figaro'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
