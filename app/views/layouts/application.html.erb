@@ -46,11 +46,17 @@
         <button class="btn btn-success-outline" type="submit">Search</button>
         <a>
           <!--<a class="nav-link" href="/users/sign_in">LogIn</a>-->
-          <%= link_to new_user_session_path, class: 'btn btn-success', role: 'button', method: :get do %>
-          Log In
-          <% end %>
-          <%= link_to new_user_registration_path, class: 'btn btn-info-outline', role: 'button', method: :get do %>
-          Sign Up
+          <% if current_user %>
+            <%= button_to destory_user_session_path, method: :delete, class: 'btn btn-warning', role: 'button' do %>
+            Log Out
+            <% end %>
+          <% else %>
+            <%= link_to new_user_session_path, class: 'btn btn-success', role: 'button', method: :get do %>
+            Log In
+            <% end %>
+            <%= link_to new_user_registration_path, class: 'btn btn-info-outline', role: 'button', method: :get do %>
+            Sign Up
+            <% end %>
           <% end %>
         </a>
       </form>
