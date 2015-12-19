@@ -1,33 +1,21 @@
-<div class="col-xs-6 col-sm-4">
+<div class="col-md-6 col-md-offset-3">
   <div class="jumbotron">
-    <h2>Sign up</h2>
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <div class="container">
-        <%= devise_error_messages! %>
-      </div>
-      <fieldset>
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, class:'form-control' %>
-      </fieldset>
-    
-      <fieldset class="field form-group">
-        <%= f.label :password %>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "off", class:'form-control' %>
-      </fieldset>
-    
-      <fieldset class="field form-group">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off", class:'form-control' %>
-      </fieldset>
-      <div class="container">
-        <%= f.submit "Sign up", class:'actions btn btn-info' %>
-        <!--<button type="button" class="btn btn-secondary-outline">-->
-        <!--  <%= render "devise/shared/links"%>-->
-        <!--</button>-->
-      </div>
+    <div class="container text-center">
+      <% if params[:plan] == '2'%>
+        <h2>Pro account</h2>
+        <p>Apply Pro account for $10 per month</p>
+        </br>
+      <% else %>
+        <h2>Basic account</h2>
+        <p>Feel free to join us !</p>
+        </br>
+      <% end %>
+    </div>
+    <h3>Sign up</h3>
+    <% if params[:plan] == '1' %>
+      <%= render "basic_form"%>
+    <% else %>
+      <%= render "pro_form"%>
     <% end %>
   </div>
 </div>
