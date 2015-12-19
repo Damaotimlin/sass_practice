@@ -1,4 +1,60 @@
-<div class="jumbotron text-center">
-    <h1>Welcome to My First RoR App</h1>
-    <h3>This would be good practice for Dayeasier!!</h3>
+<div class="container-fluid">
+    <div class="jumbotron text-center">
+        <h1>Welcome to My First RoR App</h1>
+        <h3>This would be good practice for Dayeasier!!</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 text-center">
+            <div class="card">
+                <img class="card-img-top" src="http://images.freeimages.com/images/previews/674/freedom-1314475.jpg" height="200px" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Basic Membership</h4>
+                    <p class="card-text">Sign up to get free basic access</p>
+                    <%= link_to new_user_registration_path, class: 'btn btn-info btn-lg btn-block', method: :get do %>
+                    <h4>Sign Up Free</h4>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 text-center">
+            <div class="card">
+                <img class="card-img-top" src="http://i.istockimg.com/file_thumbview_approve/53544776/6/stock-photo-53544776-girl-having-fun.jpg" height="200px" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Paid Membership</h4>
+                    <p class="card-text">Become a pro user!!</p>
+                    <%= link_to new_user_registration_path, class: 'btn btn-success btn-lg btn-block active', method: :get do %>
+                    <h4>Sign Up to PRO</h4>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+
+        <!--<div class="col-md-6 jumbotron">-->
+        <!--    <div class="text-center">-->
+        <!--        <h2>Basic Membership</h2>-->
+        <!--        <h4>Sign up to get free basic access</h4>-->
+        <!--        <%= link_to new_user_registration_path, class: 'btn btn-info-outline', role: 'button', method: :get do %>-->
+        <!--            Sign Up-->
+        <!--        <% end %>-->
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="col-md-6">-->
+        <!--    <div class="text-center">-->
+        <!--        <%= button_to new_user_registration_path, class: 'btn btn-secondary btn-lg btn-block', method: :get do %>-->
+        <!--            <h2>Basic Membership</h2>-->
+        <!--            <h4>Sign up to get free basic access</h4>-->
+        <!--        <% end %>-->
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<div class="col-md-6">-->
+        <!--    <div class="text-center">-->
+        <!--        <%= button_to new_user_registration_path, class: 'btn btn-primary btn-lg btn-block active', method: :get do %>-->
+        <!--            <h2>Paid Membership</h2>-->
+        <!--            <h4>Become a pro user!!</h4>-->
+        <!--        <% end %>-->
+        <!--    </div>-->
+        <!--</div>-->
