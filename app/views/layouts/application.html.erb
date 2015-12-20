@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript' %>
-  <%= tag :meta, :name => "stripe.key", :content => STRIPE_PUBLIC_KEY %>
+  <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
   <%= csrf_meta_tags %>
   <!-- Bootstrap is developed mobile first -->
   <!-- Required meta tags always come first -->
@@ -49,7 +49,7 @@
         <a>
           <!--<a class="nav-link" href="/users/sign_in">LogIn</a>-->
           <% if current_user %>
-            <%= button_to destory_user_session_path, method: :delete, class: 'btn btn-warning', role: 'button' do %>
+            <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-warning', role: 'button' do %>
             Log Out
             <% end %>
           <% else %>
