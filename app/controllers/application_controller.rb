@@ -4,9 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   # To make a whitelist pramaters for devise, to allow user send data to our server
-  before_filter :configure_permitted_paramaters, if: :devise_controller?
+  before_filter :configure_permitted_parametersters, if: :devise_controller?
   protected
-  def configure_permitted_paramaters
+  def configure_permitted_parameters
     devise_paramater_sanitizer.for(:sign_up) { |user| 
     user.permit(:name, :stripe_card_token, :email, :password, :password_configuration)
     }
