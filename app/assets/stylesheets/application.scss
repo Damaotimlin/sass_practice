@@ -30,8 +30,14 @@
     font-weight: 600;
 }
 
-.alert-alert { // Copied from BS4: class="alert alert-warning"
-    color: #8a6d3b;
-    background-color: #fcf8e3;
-    border-color: #faf2cc;
+.alert-alert { // Copied from BS4: class="alert alert-warning" to change Devise alert
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebcccc;
+}
+
+.alert-notice { // Copied from BS4: class="alert alert-success" to change Devise alert
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
 }
