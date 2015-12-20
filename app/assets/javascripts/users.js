@@ -25,13 +25,23 @@ var main = function(){
     function stripeResponseHandler(status, response) {
     // Get a reference to the form:
     var $form = $('#new_user'); //#new_user form was auto-defint by devise
-    // Get the token to the form:
-    var token = response.id;
-    // Add the token to the form
-    // $form.append('<input type="hidden" name="user[stripe_card_token]" value="' + token +'" />'); // Added an other hidden field with Stripe token
-    $form.append($('<input type="hidden" name="user[stripe_card_token]"/>').val(token))
-    // Submit the form:
-    $form.get(0).submit(); // After all, grap the first(0) form data,(in this case we only have 1 form declare in pro_form.html), submit all data(all hidden) with Stripe token and send to our Rails server
+    
+    if (response.error) {
+         // Show the errors on the form
+        $form.find('#stripe-alert-text').text(response.error.message);
+        $form.find('#stripe-alert-div').addClass('alert-danger');
+        $form.find('input[type=submit]').prop('disabled', false);
+        
+        } else {
+        // Get the token to the form:
+        var token = response.id;
+        // Add the token to the form
+        // $form.append('<input type="hidden" name="user[stripe_card_token]" value="' + token +'" />'); // Added an other hidden field with Stripe token
+        $form.append($('<input type="hidden" name="user[stripe_card_token]"/>').val(token))
+        // Submit the form:
+        $form.get(0).submit(); // After all, grap the first(0) form data,(in this case we only have 1 form declare in pro_form.html), 
+                               // submit all data(all hidden) with Stripe token and send to our Rails server
+        }
     };
 };
 

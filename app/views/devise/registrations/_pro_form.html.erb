@@ -2,6 +2,9 @@
   <div class="container">
     <%= devise_error_messages! %>
   </div>
+  <div  class="alert" id="stripe-alert-div" role="alert">
+    <strong id="stripe-alert-text"></strong>
+  </div>
   
   <%= hidden_field_tag 'plan', params[:plan]%>
   
