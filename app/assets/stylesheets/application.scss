@@ -41,3 +41,13 @@
     background-color: #dff0d8;
     border-color: #d0e9c6;
 }
+
+#error_explanation { // BS4 .alert-danger to change Devises' Signup error
+    padding: 15px;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebcccc;
+}

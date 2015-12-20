@@ -7,7 +7,7 @@
   
   <fieldset>
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, class:'form-control' %>
+    <%= f.email_field :email, autofocus: true, class:'form-control', placeholder:'Your Eamil account:' %>
   </fieldset>
 
   <fieldset class="field form-group">
@@ -15,20 +15,20 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off", class:'form-control' %>
+    <%= f.password_field :password, autocomplete: "off", class:'form-control', placeholder:'Passw***' %>
   </fieldset>
 
   <fieldset class="field form-group">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off", class:'form-control' %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class:'form-control', placeholder:'Confirmed passw***' %>
   </fieldset>
   <fieldset class=" field form-group">
     <%= label_tag :card_number, "Credit Card Number" %>
-    <%= text_field_tag :card_number, nil, name: nil, class:'form-control' %>
+    <%= text_field_tag :card_number, nil, name: nil, class:'form-control', placeholder:'****-****-****-****' %>
   </fieldset>
   <fieldset class="field form-group">
     <%= label_tag :card_code, "Security Code on Card (CVV)" %>
-    <%= text_field_tag :card_code, nil, name: nil, class:'form-control' %>
+    <%= text_field_tag :card_code, nil, name: nil, class:'form-control', placeholder:'This code is on the back of your credit card: ***' %>
   </fieldset>
   <fieldset class="field form-group">
     <%= label_tag :card_month, "Card Expiration" %>
