@@ -1,6 +1,8 @@
 # This file is to overwrite the defult methods Devise provide
 class Users::RegistrationsController < Devise::RegistrationsController
     
+    before_filter :select_plan, only: :new # Declare the name :select_plan and only been used while "new" Devises' controller
+    
     def create
         super do |resource|
             if params[:plan] # if do have :plan params have been submit with form
@@ -14,4 +16,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
         end   
     end
     
+    private # private is to keep this method only using in this controller
+    def select_plan
+        unless params[:plan] && (params[:plan] == '1' || params[:plan] == '2')
+            flash[:alert] = "Please select a membership od plans to sign up."
+            redirect_to root_path
+        end
+    end
 end
