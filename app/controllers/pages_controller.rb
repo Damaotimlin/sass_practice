@@ -8,6 +8,8 @@ class PagesController < ApplicationController
         
         if current_user
             @rand_user_id = check_profile_id(rand(1..User.all.length))
+        else
+            @rand_user_id = nil
         end
     end
     
