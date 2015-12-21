@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations'} # Tells route to use specification controller for users
   
+  # Make the profile url nested behind users url
+  resources :users do
+    resource :profile 
+  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :contacts # Auto generate many routes, Use 'bundle exec rake routes' to check the routes
