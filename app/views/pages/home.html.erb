@@ -31,7 +31,8 @@
     </div>
 </div>
 
-<%= link_to new_user_profile_path(current_user), method: :get do %> <!-- current_user is provide by Devise -->
-create your profile
+<% if current_user %>
+    <%= link_to new_user_profile_path(current_user), method: :get do %> <!-- current_user is provide by Devise -->
+    create your profile
+    <%end%>
 <%end%>
-
