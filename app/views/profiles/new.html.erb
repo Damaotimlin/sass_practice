@@ -41,7 +41,7 @@
     </div>
     <% flash[:success] = "Hi #{@user_email}, welcome to your profile page !" %>
 <%else%>
-    <% flash[:danger] = "You were not in a correct url" %>
+    <% flash[:danger] = "You were not in a correct link" %>
     <div class="col-md-offset-1">
         <%= link_to new_user_profile_path(current_user), method: :get, class: 'btn btn-info' do %> <!-- current_user is provide by Devise -->
         Back to your own profile

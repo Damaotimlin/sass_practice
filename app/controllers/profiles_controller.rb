@@ -4,7 +4,8 @@ class ProfilesController < ApplicationController
         # Form to user allow them to fill their own profile.
         # 'build' is rails public method; after we nested profile with users, we are able to use build_profile.
         @user = User.find(params[:user_id]) # This to make sure user who is log-in
-        @profile = @user.build_profile 
+        # @profile = @user.build_profile # This command will clean up profile data every time while user link to /users/:user_id/profile/new
+        @profile = Profile.new # This is not, it only reset Profile after submit
         @user_email = @user[:email]
     end
     
