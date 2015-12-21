@@ -31,30 +31,7 @@
     </div>
 </div>
 
+<%= link_to new_user_profile_path(current_user), method: :get do %> <!-- current_user is provide by Devise -->
+create your profile
+<%end%>
 
-
-        <!--<div class="col-md-6 jumbotron">-->
-        <!--    <div class="text-center">-->
-        <!--        <h2>Basic Membership</h2>-->
-        <!--        <h4>Sign up to get free basic access</h4>-->
-        <!--        <%= link_to new_user_registration_path, class: 'btn btn-info-outline', role: 'button', method: :get do %>-->
-        <!--            Sign Up-->
-        <!--        <% end %>-->
-        <!--    </div>-->
-        <!--</div>-->
-        <!--<div class="col-md-6">-->
-        <!--    <div class="text-center">-->
-        <!--        <%= button_to new_user_registration_path, class: 'btn btn-secondary btn-lg btn-block', method: :get do %>-->
-        <!--            <h2>Basic Membership</h2>-->
-        <!--            <h4>Sign up to get free basic access</h4>-->
-        <!--        <% end %>-->
-        <!--    </div>-->
-        <!--</div>-->
-        <!--<div class="col-md-6">-->
-        <!--    <div class="text-center">-->
-        <!--        <%= button_to new_user_registration_path, class: 'btn btn-primary btn-lg btn-block active', method: :get do %>-->
-        <!--            <h2>Paid Membership</h2>-->
-        <!--            <h4>Become a pro user!!</h4>-->
-        <!--        <% end %>-->
-        <!--    </div>-->
-        <!--</div>-->

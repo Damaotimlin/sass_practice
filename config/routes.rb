@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   # Make the profile url nested behind users url
   resources :users do
-    resource :profile 
+    resource :profile # ever user only have 1 profile
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
