@@ -11,14 +11,19 @@ class ProfilesController < ApplicationController
     def create
         # profile_params is to collect all data on the form.
         @user = User.find(params[:user_id])
-        @profile = @user.build_profile(profile_params)
-        if @profile.save # if profile alreade saved,  
-            flash[:success] = "Profile Updated!"
-            redirect_to user_path(params[:user_id])
+        if @user == current_user 
+            @profile = @user.build_profile(profile_params)
+            if @profile.save # if profile alreade saved,  
+                flash[:success] = "Profile Updated!"
+                redirect_to user_path(params[:user_id])
+            else
+                render action: :new # Run new method
+                flash[:success] = "Profile Created!"
+                redirect_to user_path(params[:user_id])
+            end
         else
-            render action: :new
-            flash[:success] = "Profile Created!"
-            redirect_to user_path(params[:user_id])
+           flash[:warning] = "You are not in a correct url"
+           redirect_to new_user_profile_path(params[:user_id])
         end
     end
     
