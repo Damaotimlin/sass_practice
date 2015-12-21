@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   belongs_to :plan
+  has_one :profile
   attr_accessor :stripe_card_token # To allow to use hidden, stripe_card_token, field we set ::_pro_form_htnl
   
   def save_with_payment
