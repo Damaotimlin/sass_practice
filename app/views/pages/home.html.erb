@@ -7,7 +7,7 @@
         <% if user_signed_in? %>
             <div class="container">
                 <% if @user.profile %>
-                    <div class="card" id="profile-card">
+                    <div class="card col-md-4" id="profile-card">
                         <div class="card-block">
                             <div class="card-title text-center">
                                 <h2><%= @user.profile.first_name %> <%= @user.profile.last_name %></h2>
@@ -20,7 +20,7 @@
                                 <p class="card-text">About me: <%= @user.profile.description %></p>
                             <%end%>
                             <div class="container">
-                                <%= link_to new_user_profile_path(current_user), class:'btn btn-info', method: :get do %> <!-- current_user is provide by Devise -->
+                                <%= link_to '#', class:'btn btn-info', method: :get do %> <!-- current_user is provide by Devise -->
                                 Update your profile
                                 <%end%>
                             </div>
@@ -35,6 +35,27 @@
                         create your profile
                     <%end%>
                 <%end%>
+                <div class="card col-md-6 col-md-offset-2">
+                    <div class="container">
+                        <div class="card" id="profile-slider">
+                            <div class="card-block">
+                                <div class="card-title text-center" id="profile-title">
+                                    <h2><%= @rand_user.profile.first_name %> <%= @rand_user.profile.last_name %></h2>
+                                </div>
+                                <p class="card-text">Job title: <%= @rand_user.profile.job_title %></p>
+                                <% if current_user.plan_id == 2 %>
+                                    <p class="card-text">Phone number: <%= @rand_user.profile.phone_number %></p>
+                                    <p class="card-text">Contact e-mail: <%= @rand_user.profile.contact_email %></p>
+                                    <p class="card-text">Dscription: <%= @rand_user.profile.description %></p>
+                                <%end%>
+                                <nav class="navbar navbar-light bg-faded">
+                                    <a herf="#" class="arrow-preview"><<<</a>
+                                    <a herf="#" class="arrow-next pull-xs-right">>>></a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         <% else %>
             <div class="col-sm-6 text-center">
