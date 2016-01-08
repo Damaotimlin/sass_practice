@@ -13,10 +13,10 @@
                                 <h2><%= @user.profile.first_name %> <%= @user.profile.last_name %></h2>
                             </div>
                             <p class="card-text">Job Title: <%= @user.profile.job_title %></p>
-                            <!-- Let pro account(plan_id=2) or self can read more profile -->
-                            <% if current_user.plan_id == 2 || @user == current_user %>
+                            <!-- Let current user can read more profile -->
+                            <% if @user == current_user %>
                                 <p class="card-text">Phone: <%= @user.profile.phone_number %></p>
-                                <p class="card-text">Contct e-mail: <%= @user.profile.contact_email %></p>
+                                <p class="card-text">Contact e-mail: <%= @user.profile.contact_email %></p>
                                 <p class="card-text">About me: <%= @user.profile.description %></p>
                             <%end%>
                             <div class="container">
@@ -43,6 +43,7 @@
                                     <h2><%= @rand_user.profile.first_name %> <%= @rand_user.profile.last_name %></h2>
                                 </div>
                                 <p class="card-text">Job title: <%= @rand_user.profile.job_title %></p>
+                                <!-- Let pro account(plan_id=2) can read more profile -->
                                 <% if current_user.plan_id == 2 %>
                                     <p class="card-text">Phone number: <%= @rand_user.profile.phone_number %></p>
                                     <p class="card-text">Contact e-mail: <%= @rand_user.profile.contact_email %></p>
