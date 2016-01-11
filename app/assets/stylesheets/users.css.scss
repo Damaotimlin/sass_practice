@@ -1,0 +1,32 @@
+.job-title-icon {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #7AC7FF;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #ABF6FF;
+    color: red;
+    text-aligh: center;
+}
+
+.profile-box {
+    border: 2px solid #33BBE8;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #33BBE8;
+    color: #FFFDF4;
+    span {
+        
+    }
+}
+
+#profile-description {
+    font-weight: 500;
+    font-Size: 20px;
+}
+
+.image-shadow {
+    -webkit-box-shadow: 2px 2px 4px 0px rgba(46, 50, 50, 0.35);
+    -moz-box-shadow:    2px 2px 4px 0px rgba(46, 50, 50, 0.35);
+    box-shadow:         2px 2px 4px 0px rgba(46, 50, 50, 0.35);
+}

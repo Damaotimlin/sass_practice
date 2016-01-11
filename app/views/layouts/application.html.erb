@@ -50,11 +50,14 @@
           <!--<a class="nav-link" href="/users/sign_in">LogIn</a>-->
           <% if current_user %>
             <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-warning', role: 'button' do %>
-            Log Out
+              Log Out
             <% end %>
+            <%= link_to user_path(current_user), method: :get, class: 'btn' do %>
+              <%= image_tag @user.profile.avatar.url(:thumb), class: 'profile-picture' %>
+            <%end%>
           <% else %>
             <%= link_to new_user_session_path, class: 'btn btn-success', role: 'button', method: :get do %>
-            Log In
+              Log In
             <% end %>
             <!--<%= link_to new_user_registration_path, class: 'btn btn-info-outline', role: 'button', method: :get do %>-->
             <!--Sign Up-->

@@ -7,20 +7,25 @@
 <% else %>
     <div class="col-md-4 col-md-offset-4">
         <div class="card text-center">
-            <%= image_tag @user.profile.avatar.url(:medium), class: 'card-img-top', alt: 'Profile image' %>
+            <%= image_tag @user.profile.avatar.url(:medium), class: 'card-img-top image-shadow', alt: 'Profile image' %>
             <div class="card-block">
                 <h2 class="card-title">
                     <%= @user.profile.first_name %> <%= @user.profile.last_name %>
                 </h2>
                 <h3>
-                    <%= job_title_icon(@user.profile.job_title) %> <%= @user.profile.job_title %></br> <!-- job_title_icon is a helper function def ::users_helper.rb -->
+                    <span class="job-title-icon"><%= job_title_icon(@user.profile.job_title) %></span> <%= @user.profile.job_title %></br> <!-- job_title_icon is a helper function def ::users_helper.rb -->
                 </h3>
-                <p class="card-text">
+                <p class="card-text profile-box">
+                    <span id="profile-description">
+                        About Me<br><%= @user.profile.description %><br>
+                    </span>
                     <!-- Let pro account(plan_id=2) or self can read more profile -->
                     <% if current_user.plan_id == 2 || @user == current_user %> 
-                        <%= @user.profile.phone_number %></br>
-                        <%= @user.profile.contact_email %></br>
-                        <%= @user.profile.description %></br>
+                        <span>
+                            Contact Info<br>
+                            Phone: <%= @user.profile.phone_number %></br>
+                            Mail: <%= @user.profile.contact_email %></br>
+                        </span>
                     <% end %>
                 </p>
             </div>

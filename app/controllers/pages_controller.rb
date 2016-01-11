@@ -4,6 +4,7 @@ class PagesController < ApplicationController
         @pro_plan = Plan.find(2)
         if user_signed_in?
             @user = User.find(current_user)
+            @profile = @user.profile
         end
         
         if current_user
@@ -14,7 +15,10 @@ class PagesController < ApplicationController
     end
     
     def about
-        
+        if user_signed_in?
+            @user = User.find(current_user)
+            @profile = @user.profile
+        end
     end
     
     private

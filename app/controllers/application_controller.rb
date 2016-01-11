@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
     }
   end
   
+  def user_profile_picture
+    @user = User.find(params[current_user])
+    @profile = @user.profile
+  end
 end

@@ -1,6 +1,11 @@
 class ContactsController < ApplicationController
+    
     def new
         @contact = Contact.new
+        if user_signed_in?
+            @user = User.find(current_user)
+            @profile = @user.profile
+        end
     end
     
     def create
@@ -19,7 +24,6 @@ class ContactsController < ApplicationController
             redirect_to new_contact_path #, notice: "ERROR: Message don\'t sent"
         end
     end
-    
     
     private
     
