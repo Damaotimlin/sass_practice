@@ -6,36 +6,7 @@
                 <h2>Create Your Profile</h2>
             </div>
             <div class="jumbotron">
-                <%= form_for @profile, url: user_profile_path do |f| %> <!-- Since this is a singular resource path, we have to specify the path -->
-                    <fieldset class="form-group">
-                        <%= f.label :first_name %>
-                        <%=f.text_field :first_name, class: 'form-control', placeholder: 'First name: ' %>
-                    </fieldset>
-                    <fieldset class="form-group">
-                        <%= f.label :last_name %>
-                        <%= f.text_field :last_name, class: 'form-control', placeholder: 'Last name:' %>
-                    </fieldset>
-                    <fieldset class="form-group">
-                        <%= f.label 'Your Job title:' %>
-                        <%= f.select :job_title, ['---Please sellect one---','Entrepreneur', 'Developer', 'Investor', 'Manager'], {}, class: 'form-control' %>
-                        <!-- {} is for other option; if not goinig to use it, need to leave it empty-->
-                    </fieldset>
-                    <fieldset class="form-group">
-                        <%= f.label :phone_number %>
-                        <%= f.text_field :phone_number, class: 'form-control', placeholder: '02-******** or 09********:' %>
-                    </fieldset>
-                    <fieldset class="form-group">
-                        <%= f.label :contact_email %>
-                        <%= f.text_field :contact_email, class: 'form-control', placeholder: 'If you need specify contact email or just leave it empty' %>
-                    </fieldset>
-                    <fieldset class="form-group">
-                        <%= f.label 'Talk about more of yourself:' %>
-                        <%= f.text_area :description, class: 'form-control', placeholder: 'Once upon a time ...' %>
-                    </fieldset>
-                    <div class="container">
-                        <%= f.submit "Update Profile", class:'actions btn btn-success' %>
-                    </div>
-                <%end%>
+            <%= render 'form' %>
             </div>
         </div>
     </div>

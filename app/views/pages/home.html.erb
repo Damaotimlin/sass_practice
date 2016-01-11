@@ -20,7 +20,7 @@
                                 <p class="card-text">About me: <%= @user.profile.description %></p>
                             <%end%>
                             <div class="container">
-                                <%= link_to '#', class:'btn btn-info', method: :get do %> <!-- current_user is provide by Devise -->
+                                <%= link_to edit_user_profile_path(current_user), class:'btn btn-info', method: :get do %> <!-- current_user is provide by Devise -->
                                 Update your profile
                                 <%end%>
                             </div>

@@ -1,0 +1,12 @@
+<!-- Create new profile -->
+    <div class ="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="alert alert-success text-center">
+                <h2>Update Your Profile</h2>
+            </div>
+            <div class="jumbotron">
+            <%= render 'form' %>
+            </div>
+        </div>
+    </div>
+    <% flash[:success] = "Hi #{@user_email}, welcome to your profile page !" %>

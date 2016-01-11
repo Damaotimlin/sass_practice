@@ -28,6 +28,22 @@ class ProfilesController < ApplicationController
         end
     end
     
+    def edit 
+        @user = User.find(params[:user_id])
+        @profile = @user.profile # pull out the user profilegi
+    end
+    
+    def update
+       @user = User.find(params[:user_id])
+       @profile = @user.profile
+       if @profile.update_attributes(profile_params) # update_attributes is a rails method. It will save any changed to DB
+       flash[:success] = "Profile Updated!"
+       redirect_to user_path(params[:user_id])
+        else
+            render action: :edit # if save fail, stay in edit page
+        end
+    end
+    
     private
         def profile_params # white list
             params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description)
