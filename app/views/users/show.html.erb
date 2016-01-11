@@ -5,15 +5,25 @@
 <% elsif current_user == nil %>
     <p>Please sign up an account to view more</p>
 <% else %>
-    <%= image_tag @user.profile.avatar.url %></br>
-    <%= image_tag @user.profile.avatar.url(:medium) %></br>
-    <%= image_tag @user.profile.avatar.url(:thumb) %></br>
-    <%= @user.profile.first_name %> <%= @user.profile.last_name %><br/>
-    <%= @user.profile.job_title %></br>
-    <!-- Let pro account(plan_id=2) or self can read more profile -->
-    <% if current_user.plan_id == 2 || @user == current_user %> 
-        <%= @user.profile.phone_number %></br>
-        <%= @user.profile.contact_email %></br>
-        <%= @user.profile.description %></br>
-    <% end %>
+    <div class="col-md-4 col-md-offset-4">
+        <div class="card text-center">
+            <%= image_tag @user.profile.avatar.url(:medium), class: 'card-img-top', alt: 'Profile image' %>
+            <div class="card-block">
+                <h2 class="card-title">
+                    <%= @user.profile.first_name %> <%= @user.profile.last_name %>
+                </h2>
+                <h3>
+                    <%= job_title_icon(@user.profile.job_title) %> <%= @user.profile.job_title %></br> <!-- job_title_icon is a helper function def ::users_helper.rb -->
+                </h3>
+                <p class="card-text">
+                    <!-- Let pro account(plan_id=2) or self can read more profile -->
+                    <% if current_user.plan_id == 2 || @user == current_user %> 
+                        <%= @user.profile.phone_number %></br>
+                        <%= @user.profile.contact_email %></br>
+                        <%= @user.profile.description %></br>
+                    <% end %>
+                </p>
+            </div>
+        </div>
+    </div>
 <% end %>
