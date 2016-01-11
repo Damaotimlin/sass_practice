@@ -1,4 +1,4 @@
-<%= form_for @profile, url: user_profile_path do |f| %> <!-- Since this is a singular resource path, we have to specify the path -->
+<%= form_for @profile, url: user_profile_path, html: {multipart: true} do |f| %> <!-- Since this is a singular resource path, we have to specify the path -->
     <fieldset class="form-group">
         <%= f.label :first_name %>
         <%=f.text_field :first_name, class: 'form-control', placeholder: 'First name: ' %>
@@ -6,6 +6,10 @@
     <fieldset class="form-group">
         <%= f.label :last_name %>
         <%= f.text_field :last_name, class: 'form-control', placeholder: 'Last name:' %>
+    </fieldset>
+    <fieldset class="form-group">
+        <%= f.label :avatar %>
+        <%=f.file_field :avatar, class: 'form-control', placeholder: 'First name: ' %>
     </fieldset>
     <fieldset class="form-group">
         <%= f.label 'Your Job title:' %>

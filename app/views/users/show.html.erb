@@ -5,6 +5,9 @@
 <% elsif current_user == nil %>
     <p>Please sign up an account to view more</p>
 <% else %>
+    <%= image_tag @user.profile.avatar.url %></br>
+    <%= image_tag @user.profile.avatar.url(:medium) %></br>
+    <%= image_tag @user.profile.avatar.url(:thumb) %></br>
     <%= @user.profile.first_name %> <%= @user.profile.last_name %><br/>
     <%= @user.profile.job_title %></br>
     <!-- Let pro account(plan_id=2) or self can read more profile -->
