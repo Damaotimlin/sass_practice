@@ -2,7 +2,9 @@
     <div class="alert alert-danger">
         <p>Sorry, this user do not have profile</p>
     </div>
-<%else%>
+<% elsif current_user == nil %>
+    <p>Please sign up an account to view more</p>
+<% else %>
     <%= @user.profile.first_name %> <%= @user.profile.last_name %><br/>
     <%= @user.profile.job_title %></br>
     <!-- Let pro account(plan_id=2) or self can read more profile -->
