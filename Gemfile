@@ -41,6 +41,9 @@ gem 'stripe'
 # Figaro strives to be secure by default by encouraging a convention that keeps configuration out of Git
 gem 'figaro'
 
+# Paperclip for upload profile picture
+gem 'paperclip', '~> 4.3'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
