@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  resources :contacts # Auto generate many routes, Use 'bundle exec rake routes' to check the routes
+  resources :contacts # Auto generate many(7 types of controller actions: index, show, new, edit, destory, update, create) routes, Use 'bundle exec rake routes' to check the routes
   get '/about' => 'pages#about'
   # You can have the root of your site routed with "root"
   root 'pages#home' # Keep root in the button
